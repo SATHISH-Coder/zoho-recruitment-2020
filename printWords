@@ -1,6 +1,6 @@
 public class Middle 
 { 
-    String s = "WELCOME";
+    static String s = "WELCOME";
     public static void printWords(int n) 
     {                 
         int middle = n/2 ;

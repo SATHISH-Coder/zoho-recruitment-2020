@@ -5,6 +5,7 @@ public class Middle
     {                 
         int middle = n/2 ;
         char c = s.charAt(middle);
+        char [] a=s.toCharArray();
         int i, j;  
         for(i=0; i<n; i++)  { 
         for(j=2*(n-i); j>=0; j--) 
@@ -12,16 +13,18 @@ public class Middle
                 System.out.print(" "); // printing space
             } 
             for(j=0; j<=i; j++) //  inner loop for columns
-            {       
-                System.out.print(c); 
+            {     
+                if(middle<=j){
+                System.out.print(a[j]); 
+            } 
+                
             }           
             System.out.println(); // ending line after each row
         } 
     } 
     public static void main(String args[]) 
-    { 
-    s = "WELCOME";
+    {     
     int stringLength = s.length() ;       
         printWords(stringLength); 
-    } 
+    }
 }
